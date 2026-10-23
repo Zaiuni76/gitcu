@@ -1,0 +1,110 @@
+/* تنسيقات عامة للصفحة */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* تنسيق العنوان الرئيسي للصفحة */
+h1 {
+    font-size: 2.5em;
+    color: #1a365d;
+    border-bottom: 2px solid #1a365d;
+    padding-bottom: 10px;
+}
+
+/* تنسيق العناوين الفرعية للمقال */
+.article-heading {
+    font-size: 2em;
+    color: #2b6cb0;
+    margin-top: 40px;
+}
+
+/* تنسيق فقرات المقال */
+.article-text {
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+/* القائمة الجانبية (Sidebar) */
+#sidebar {
+    background-color: #2c3e50; /* تم تغيير اللون ليتناسق مع الهيدر */
+    position: fixed;
+    right: -250px; /* إخفاء القائمة جهة اليمين */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    color: #f2f2f2;
+    transition: right 0.3s ease; /* تحريك سلس عند الظهور والإخفاء */
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+}
+#sidebar a,ul{
+text-decoration: none;
+color: white;
+list-style: none;
+
+}
+
+#sidebar ul li a:hover {
+    background-color: #406080;
+}
+#sidebar.active {
+    right: 0; 
+}
+#sidebar #sideBtn1 {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: #2c3e50; 
+}
+
+#sidebarTitle {
+     background-color: #2c3e50; 
+    text-align: center;
+    font-size: 20px;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 15px ;
+        text-align: right;
+}
+
+
+
+#btnholder {
+    position: absolute;
+    right: 0px;
+}
+
+/* تنسيق زر الثلاث خطوط */
+#sideBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    margin-right: 20px;
+}
+
+/* تنسيق الخطوط الفردية */
+#sideBtn .line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* تأثير عند تمرير الفأرة على الزر */
+#sideBtn:hover .line {
+    background-color: #3498db;
+}
+/* نهاية القائمة الجانبية */

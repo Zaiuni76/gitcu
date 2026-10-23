@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>التوصيات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>اختر ما يناسبك</h1></header>
+
+    <div style="text-align: center; margin: 20px;">
+        <input type="number" id="budget" placeholder="ميزانيتك ($)">
+        <br><br>
+        
+        <select id="usage">
+            <option value="gaming">للألعاب</option>
+            <option value="editing">للمونتاج</option>
+            <option value="programming">للبرمجة</option>
+            <option value="browsing">للتصفح العادي</option>
+        </select>
+        <br><br>
+        <button onclick="findMyPC()">ابحث</button>
+    </div>
+
+    <div class="container" id="resultsArea"></div>
+
+    <script src="java.js"></script>
+    
+    
+</body>
+</html>

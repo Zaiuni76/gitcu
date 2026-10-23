@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>المتجر</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+  <button id="sideBtn1"> <h1 id="sidebarTitle">[x] </h1></button>
+   
+    <hr>
+  <ul>
+    <li><a href="index.html">الصفحة الرئيسية</a></li>
+    <li><a href="shop.html">المتجر</a></li>
+    <li><a href="info.html">معلومات</a></li>
+<li><a href="recomend.html">توصيات</a></li>   
+</ul>
+</aside>
+    <header>
+          <div id="btnholder"><button id="sideBtn">
+
+
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        </button>
+        </div >
+          <DIv id="titeholder">
+        <h1 style="align-items: center;">كل الحواسيب المتوفرة</h1></DIv></header>
+    
+    <div class="container" id="shopGrid"></div>
+
+    <script src="JAVA.js"></script>
+    
+    <script>
+        let grid = document.getElementById("shopGrid");
+        
+        // حلقة تكرار تمر على كل الأجهزة وتطبعها
+        for (let i = 0; i < allComputers.length; i++) {
+            grid.innerHTML += `
+            <div class="card">
+             <img src="${allComputers[i].image}">
+               <div class="card-content">
+               <h2>${allComputers[i].name}</h2>
+              <p>السعر: $${allComputers[i].price}</p>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
