@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>تفاصيل الكمبيوتر</title>
+    <link rel="stylesheet" href="css/d_style.css">
 </head>
-<body id="details-container">
-
+<body>
     
-        <div><img id="comp-image" src="" alt="صورة الكمبيوتر" width="400"></div>
-        <h1 id="comp-name"></h1>
-        <p id="comp-price"></p>
-        <p id="comp-type"></p>
+    <header>
+      <h1>تفاصيل الكمبيوتر</h1>
+    </header>
 
+    <div class="main-content-wrapper">
+        <div id="img-holder">
+            <img id="comp-image" src="" alt="صورة الحاسوب">
+        </div>
+
+        <div id="detalis-con"> 
+            <h1 id="comp-name"></h1>
+            <p id="comp-price"></p>
+            <p id="comp-type"></p>
+            
+            <!-- جدول المواصفات التقنية -->
+            <div id="specs-container">
+                <h3>1. المواصفات التقنية</h3>
+                <table class="specs-table">
+                    <thead>
+                        <tr>
+                            <th>المواصفة</th>
+                            <th>التفاصيل</th>
+                        </tr>
+                    </thead>
+                    <tbody id="specs-tbody">
+                        <!-- سيتم تعبئة البيانات ديناميكياً هنا -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button id="buybtn">شراء الآن</button> <a href="Shop.html"><button id="back" >رجوع</button></a>
 
 <script src="detailsjs.js"></script>
 </body>
