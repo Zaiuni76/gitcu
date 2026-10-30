@@ -1,0 +1,177 @@
+.btnshop{background: transparent;
+border: none;}
+
+/* --- القائمة الجانبية (Sidebar) --- */
+#sidebar {
+    background-color: #2c3e50; /* تم تغيير اللون ليتناسق مع الهيدر */
+    position: fixed;
+    right: -250px; /* إخفاء القائمة جهة اليمين */
+    top: 0;
+    height: 100%;
+    width: 250px;
+    color: #f2f2f2;
+    transition: right 0.3s ease; /* تحريك سلس عند الظهور والإخفاء */
+    z-index: 1000;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+}
+
+/* الكلاس الذي نضيفه بـ JavaScript لإظهار القائمة */
+#sidebar.active {
+    right: 0; 
+}
+
+#sidebarTitle {
+    text-align: center;
+    font-size: 20px;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 15px 0;
+}
+
+#sideBtn1 {
+    background: none;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#sidebar ul li {
+    padding: 0;
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    color: #f2f2f2;
+    display: block;
+    padding: 12px 20px;
+    font-size: 18px;
+    transition: background 0.2s ease;
+}
+
+#sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+/* --- الهيكل العام (Body & Header) --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+
+    background-color: #2c3e50;
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#titeholder h1{margin: 0;}
+header #titeholder {
+  
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 24px;
+}
+#sidebarTitle{
+    text-align: right;
+}
+
+#btnholder {
+  position: absolute;
+right: 0px;
+ 
+}
+/* تنسيق زر الثلاث خطوط */
+#sideBtn {
+    background-color: transparent; /* جعل خلفية الزر شفافة لتتناسب مع الهيدر */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; /* جعل الخطوط تحت بعضها */
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    margin-right: 20px; /* مسافة من حافة الصفحة */
+}
+
+/* تنسيق الخطوط الفردية */
+#sideBtn .line {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white; /* لون الخطوط أبيض ليتناسب مع الهيدر الغامق */
+    border-radius: 3px;
+    transition: 0.3s ease; /* حركة سلسة عند التفاعل */
+}
+
+/* تأثير بسيط عند تمرير الفأرة على الزر */
+#sideBtn:hover .line {
+    background-color: #3498db; /* يغير لون الخطوط إلى الأزرق عند التمرير */
+}
+
+
+/* --- الحاوية والبطاقات (Cards Container) --- */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h2 {
+    margin: 0 0 10px 0;
+    color: #2980b9;
+    font-size: 22px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}

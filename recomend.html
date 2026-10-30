@@ -19,6 +19,15 @@
             <option value="browsing">للتصفح العادي</option>
         </select>
         <br><br>
+        <!-- مثال لزر يتم إنشاؤه برمجياً لكل كمبيوتر -->
+<button onclick="goToDetails(0)">تفاصيل الكمبيوتر</button>
+
+<script>
+  function goToDetails(computerId) {
+    // الانتقال لصفحة التفاصيل مع تمرير الـ id في الرابط
+    window.location.href = `details.html?id=${computerId}`;
+  }
+</script>
         <button onclick="findMyPC()">ابحث</button>
     </div>
 

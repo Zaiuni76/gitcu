@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>المتجر</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/shop_style.css">
 </head>
 <body>
 
@@ -33,13 +33,14 @@
     <div class="container" id="shopGrid"></div>
 
     <script src="JAVA.js"></script>
-    
+    <button onclick="viewDetails" ></button>
     <script>
         let grid = document.getElementById("shopGrid");
         
         // حلقة تكرار تمر على كل الأجهزة وتطبعها
         for (let i = 0; i < allComputers.length; i++) {
             grid.innerHTML += `
+             <button id="${allComputers[i].id} " class="btnshop" onclick="viewDetails(${allComputers[i].id})">
             <div class="card">
              <img src="${allComputers[i].image}">
                <div class="card-content">
@@ -47,7 +48,7 @@
               <p>السعر: $${allComputers[i].price}</p>
                     </div>
                 </div>
-            `;
+             </button>`;
         }
     </script>
 </body>
